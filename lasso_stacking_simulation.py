@@ -18,7 +18,7 @@ from skmultilearn.adapt import MLkNN
 from sklearn.naive_bayes import MultinomialNB
 from skmultilearn.ext import Meka, download_meka
 from skmultilearn.model_selection import IterativeStratification
-# 计算所有结果
+# Calculate all results
 def calculate_all(np_test, np_pred,pre_score, model_time,output,isPrint=False):
     value = list()
     value.append(accuracy(np_test,np_pred))
@@ -50,7 +50,7 @@ def calculate_all(np_test, np_pred,pre_score, model_time,output,isPrint=False):
     return(output)
 
 
-# BR分类器
+# BR classifier
 def BR(X_train,y_train,X_test,new_X_test):
     classifier = BinaryRelevance(
         classifier=SVC(probability=True,C=1.0, kernel='linear',gamma='auto'),
@@ -64,7 +64,7 @@ def BR(X_train,y_train,X_test,new_X_test):
     new_pro_predictions = classifier.predict_proba(new_X_test)
     return(predictions,pro_predictions,new_pro_predictions)
 
-# CC分类器
+# CC classifier
 def CC(X_train,y_train,X_test,new_X_test):
     classifier = ClassifierChain(
         classifier=SVC(probability=True,C=1.0, kernel='poly',gamma='auto'),
@@ -78,7 +78,7 @@ def CC(X_train,y_train,X_test,new_X_test):
     new_pro_predictions = classifier.predict_proba(new_X_test)
     return(predictions,pro_predictions,new_pro_predictions)
 
-# LP 分类器
+# LP classifier
 def LP(X_train,y_train,X_test,new_X_test):
     classifier = ClassifierChain(
         classifier=RandomForestClassifier(n_estimators=20),
@@ -93,17 +93,7 @@ def LP(X_train,y_train,X_test,new_X_test):
     return(predictions,pro_predictions,new_pro_predictions)
 
 
-#MLKNN分类器
-def MLKNN(X_train,y_train,X_test,y_test):
-    classifier = MLkNN(k=5)
-    # train
-    classifier.fit(X_train, y_train)
-    # predict
-    predictions = classifier.predict(X_test)
-    pro_predictions = classifier.predict_proba(X_test)
-    return(predictions,pro_predictions)
-
-# RAkEL 分类器
+# RAkEL classifier
 def RAkEL(X_train,y_train,X_test,y_test):
     meka = Meka(
         meka_classifier="meka.classifiers.multilabel.RAkEL",
@@ -114,7 +104,7 @@ def RAkEL(X_train,y_train,X_test,y_test):
     predictions = meka.predict(X_test)
     return (predictions)
 
-# MLS 分类器
+# MLS classifier
 def MLS(X_train,y_train,X_test,y_test):
     meka = Meka(
         meka_classifier="meka.classifiers.multilabel.BR",
@@ -125,13 +115,11 @@ def MLS(X_train,y_train,X_test,y_test):
     predictions = meka.predict(X_test)
     return (predictions)
 
-# 各个基分类器输出结果，特征降维联合
+# Features combine the output of each base classifier
 def combine_feature(pro_br,pro_cc,pro_lp):
     br = pd.DataFrame(pro_br.todense())
     cc = pd.DataFrame(pro_cc.todense())
     lp = pd.DataFrame(pro_lp.todense())
-    # mlknn=pd.DataFrame(pro_mlknn.todense())
-    # x_se = pd.DataFrame(X_se)
     X_new = pd.concat([br, cc, lp], axis=1)
     return(X_new)
 
@@ -141,23 +129,23 @@ if __name__ == '__main__':
     # dataset = "emotions"
     # label_count = 6
 
-    # # 读入arff数据
+    # # read arff data
     # dataset,label_count=read_dataset()
     # path = "data/" + dataset + "/" + dataset
-    # # 读入ARFF文件数据
+    # # read ARFF file data
     # X, Y = read_arff(path, label_count)
 
-    # 读入mat数据
-    dataset = "simulation_data6.mat"
-    # 读入mat文件数据
+    # read mat data
+    dataset = "simulation_data.mat"
+    # read mat file data
     X, Y = read_matfile(dataset)
 
-    print("当前数据集为："+dataset)
+    print("current datasets："+dataset)
 
     output = list()
-    # 划分30%测试集
+    # partition 30% for test sets
     X_train, y_train, X_test, y_test = iterative_train_test_split(X, Y, test_size=0.3)
-    # 划分剩余的35%为训练集，35%为验证集
+    # Divide the remaining 35% into training sets and 35% into validation sets
     X_train_train, y_train_train, X_test_validation, y_test_validation = iterative_train_test_split(X_train, y_train, test_size=0.5)
 
     start_time = time.time()
@@ -225,14 +213,14 @@ if __name__ == '__main__':
 
     # base+group_sparsity
     print("****************base_group_sparsity*********")
-    # 学习w
+    # learning w
     groups = np.arange(stacking.values.shape[1]) // y_test_validation.todense().shape[1]
     model = blockwise_descent.SGL(groups=groups, alpha=0.05, lbda=math.pow(10, -3),
                                   beta=math.pow(10, -2), enta=0.1)
     model.fit(stacking.values, np.array(y_test_validation.todense()))
     w = model.coef_
     print(w)
-    # 预测
+    # prediction
     pre_score = np.dot(new_stacking.values, w)
     pred_label = np.rint(pre_score)
     pred_label = np.int64(pred_label >= 0.5)
