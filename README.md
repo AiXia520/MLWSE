@@ -4,7 +4,7 @@ The code for the paper Multi-Label Classification with Weighted Classifier Selec
 
 ## Requirements
 
-* python 3.6
+* python 3
 * [scikit-learn](https://scikit-learn.org/)
 * [scikit-multilearn](http://scikit.ml/index.html)
 * [numpy](https://numpy.org/)
