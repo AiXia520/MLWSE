@@ -17,7 +17,7 @@ from skmultilearn.adapt import MLkNN
 from sklearn.naive_bayes import MultinomialNB
 from skmultilearn.ext import Meka, download_meka
 from skmultilearn.model_selection import IterativeStratification
-# 计算所有结果
+# calculate all results
 def calculate_all(np_test, np_pred,pre_score, model_time,output,isPrint=False):
     value = list()
     value.append(accuracy(np_test,np_pred))
@@ -49,7 +49,7 @@ def calculate_all(np_test, np_pred,pre_score, model_time,output,isPrint=False):
     return(output)
 
 
-# BR分类器
+# BR classifier
 def BR(X_train,y_train,X_test,new_X_test):
     classifier = BinaryRelevance(
         classifier=SVC(probability=True,C=1.0, kernel='rbf',gamma='scale'),
@@ -63,7 +63,7 @@ def BR(X_train,y_train,X_test,new_X_test):
     new_pro_predictions = classifier.predict_proba(new_X_test)
     return(predictions,pro_predictions,new_pro_predictions)
 
-# CC分类器
+# CC classifier
 def CC(X_train,y_train,X_test,new_X_test):
     classifier = ClassifierChain(
         classifier=SVC(probability=True,C=1.0, kernel='rbf',gamma='scale'),
@@ -77,7 +77,7 @@ def CC(X_train,y_train,X_test,new_X_test):
     new_pro_predictions = classifier.predict_proba(new_X_test)
     return(predictions,pro_predictions,new_pro_predictions)
 
-# LP 分类器
+# LP classifier
 def LP(X_train,y_train,X_test,new_X_test):
     classifier = ClassifierChain(
         classifier=RandomForestClassifier(n_estimators=20),
@@ -92,17 +92,7 @@ def LP(X_train,y_train,X_test,new_X_test):
     return(predictions,pro_predictions,new_pro_predictions)
 
 
-#MLKNN分类器
-def MLKNN(X_train,y_train,X_test,y_test):
-    classifier = MLkNN(k=5)
-    # train
-    classifier.fit(X_train, y_train)
-    # predict
-    predictions = classifier.predict(X_test)
-    pro_predictions = classifier.predict_proba(X_test)
-    return(predictions,pro_predictions)
-
-# RAkEL 分类器
+# RAkEL classifier
 def RAkEL(X_train,y_train,X_test,y_test):
     meka = Meka(
         meka_classifier="meka.classifiers.multilabel.RAkEL",
@@ -113,7 +103,7 @@ def RAkEL(X_train,y_train,X_test,y_test):
     predictions = meka.predict(X_test)
     return (predictions)
 
-# MLS 分类器
+# MLS classifier
 def MLS(X_train,y_train,X_test,y_test):
     meka = Meka(
         meka_classifier="meka.classifiers.multilabel.BR",
@@ -124,13 +114,11 @@ def MLS(X_train,y_train,X_test,y_test):
     predictions = meka.predict(X_test)
     return (predictions)
 
-# 各个基分类器输出结果，特征降维联合
+# Features combine the output of each base classifier
 def combine_feature(pro_br,pro_cc,pro_lp):
     br = pd.DataFrame(pro_br.todense())
     cc = pd.DataFrame(pro_cc.todense())
     lp = pd.DataFrame(pro_lp.todense())
-    # mlknn=pd.DataFrame(pro_mlknn.todense())
-    # x_se = pd.DataFrame(X_se)
     X_new = pd.concat([br, cc, lp], axis=1)
     return(X_new)
 
