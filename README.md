@@ -7,9 +7,9 @@ The code for the paper Multi-Label Classification with Weighted Classifier Selec
 * python 3.6
 * [scikit-learn](https://scikit-learn.org/)
 * [scikit-multilearn](http://scikit.ml/api/skmultilearn.html)
-* numpy
-* scipy
-* pandas
+* [numpy](https://numpy.org/)
+* [scipy](https://www.scipy.org/)
+* [pandas](https://pandas.pydata.org/)
 
 ## Instructions
 
@@ -73,8 +73,12 @@ We analysis convergence of MLWSE-L1 and MLWSE-L21 by conducting experiments on t
 
 ## References
 [1] G. Tsoumakas, E. Spyromitros-Xioufis, J. Vilcek, I. Vlahavas, Mulan: A java library for multi-label learning, Journal of Machine Learning Research, 12 (2011) 2411-2414.
+
 [2] J. Read, P. Reutemann, B. Pfahringer, G. Holmes, Meka: a multi-label/multi-target extension to weka, Journal of Machine Learning Research, 17 (2016) 667-671.
-[3] https://github.com/kdis-lab/ExecuteMulan
+
+[3] https://github.com/kdis-lab/ExecuteMulan.
+
+
 
 
 
