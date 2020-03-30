@@ -28,9 +28,6 @@ There is a folder `data/`, which contains some multi-label datasets.These datase
 
 ### MLWSE-L1 And MLWSE-L21
 we use the accelerated proximal gradient and block coordinate descent to optimize MLWSE-L1 and MLWSE-L21, respectively.You can find in `lasso.py` and `util/blockwise_descent_semisparse.py`.
-1. `cd root/`;
-2. Run `python lasso_stacking.py`, get `MLWSE-L1 results`;
-3. Run `python lasso_stacking2.py`, get `MLWSE-L21 results`;
 
 #### 2-D Synthetic Datasets Results
 
@@ -38,11 +35,18 @@ With 2-D synthetic datasets, we evaluate the weighted classifier selection abili
 1. `cd root/`;
 2. Run `lasso_stacking_simulaiton.py`, get `2-D Synthetic Datasets Results`;
 
-
 #### Benchmark Datasets Results
-
+For multi-label benchmark datasets,you can use the following steps:
+1. `cd root/`;
+2. Run `python lasso_stacking.py`, get `Benchmark Datasets MLWSE-L1 results`;
+3. Run `python lasso_stacking2.py`, get `Benchmark Datasets MLWSE-L21 results`;
 
 #### Real-world Application Results
+To explore the potential application of our proposed method,  we apply our approach to a real Cardiovascular and Cerebrovascular Disease (CCD) dataset to demonstrate its potential for practical applications in medical diagnosis, and we take CCD dataset as another benchmarking dataset to run the experiments. 
+
+1. `cd root/`;
+2. Run `python lasso_stacking_ccd.py`, get `CCD datasets MLWSE-L1 results`;
+3. Run `python lasso_stacking2_ccd.py`, get `CCD datasets MLWSE-L21 results`;
 
 
 ### Algorithm Evaluation
