@@ -1,8 +1,9 @@
 from skmultilearn.dataset import load_from_arff
 import pandas as pd
-# dataset为数据集，label_count为数据集标签数
-# 输入：路径，标签数
-# 输出：X，Y
+# dataset:datasets name
+# label_count:Number of labels in dataset
+# input：The path of the datasets;label_count
+# output：X，Y
 def read_arff(path,label_count):
 
     path_to_arff_file=path+".arff"
@@ -16,7 +17,7 @@ def read_arff(path,label_count):
     )
     n_samples, n_features = X.shape
     n_samples, label=Y.shape
-    print("样本数："+str(n_samples)+"  特征数："+str(n_features)+"  标签数："+str(label))
+    print("n_samples："+str(n_samples)+"  n_features："+str(n_features)+"  label_count："+str(label))
     return(X, Y)
 
 if __name__ == '__main__':
