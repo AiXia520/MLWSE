@@ -17,4 +17,4 @@ There is a folder `data/`, which contains some multi-label datasets.These datase
 
 #### Baseline(Ensemble multi-label classification methods)
 1. There is a folder `baseline/`, which contains seven state-of-the-art ensemble multi-label classification methods including EBR, ECC, EPS, RAkEL, CDE, AdaBoost.MH and MLS. These methods were implemented using the Mulan and Meka frameworks, which provide an API to use their functionalities in Java code. You can also download from [KDIS-lib](https://github.com/kdis-lab/ExecuteMulan).
-2. We have done a detailed integration, You can run `main.java` under the package `com.baseline.ensmeble` to get the experimental results.
+2. We have done a detailed integration, You can run `main.java` under the package `src/com.baseline.ensmeble` to get the experimental results.
