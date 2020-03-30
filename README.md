@@ -21,6 +21,10 @@ There is a folder `data/`, which contains some multi-label datasets.These datase
 1. There is a folder `baseline/`, which contains seven state-of-the-art ensemble multi-label classification methods including EBR, ECC, EPS, RAkEL, CDE, AdaBoost.MH and MLS. These methods were implemented using the Mulan and Meka frameworks, which provide an API to use their functionalities in Java code. You can also download from [KDIS-lib](https://github.com/kdis-lab/ExecuteMulan).
 2. We have done a detailed integration, You can run `main.java` under the package `src/com.baseline.ensmeble` to get the experimental results.
 
+#### MLWSE-L1 And MLWSE-L21
+1. `cd root/`
+2. Run `python lasso_stacking.py`, get `MLWSE-L1 results`
+3. Run `python lasso_stacking2.py`, get `MLWSE-L21 results`
 
 
 
