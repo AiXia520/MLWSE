@@ -3,7 +3,8 @@ from utils import S, norm_non0
 from sklearn.metrics.pairwise import pairwise_distances,cosine_similarity
 import math
 import pandas as pd
-__author__ = 'Romain Tavenard romain.tavenard[at]univ-rennes2.fr'
+
+#use block coordinate descent to optimize MLWSE-L21
 
 class SGL:
     def __init__(self, groups, alpha, lbda, beta, enta, ind_sparse, max_iter_outer=500, max_iter_inner=100, rtol=1e-6):
@@ -34,11 +35,11 @@ class SGL:
         df = pd.DataFrame(columns=["step", "loss"])
         XTX = numpy.dot(numpy.transpose(X), X)
         XTY = numpy.dot(numpy.transpose(X), y)
-        # 初始化w
+        # Initialize the w
         self.coef_ = numpy.dot(numpy.linalg.inv(XTX + self.enta * numpy.eye(d)), XTY).astype(numpy.float)
-        # 计算相似度距离
+        # Calculate the similarity distance
         H = pairwise_distances(numpy.transpose(y), metric="cosine")
-        # 计算步长，通过计算Lipschitz 常数
+        # Calculate the step size by calculating the Lipschitz constant
         t = n /(math.sqrt(2 * math.pow((numpy.linalg.norm(XTX, ord=2)), 2) + math.pow(numpy.linalg.norm(self.beta * H, ord=2), 2)))
 
         # t = n / (numpy.linalg.norm(X, 2) ** 2)  # Adaptation of the heuristic (?) from fabianp's code
