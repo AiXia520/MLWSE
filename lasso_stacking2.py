@@ -130,16 +130,16 @@ if __name__ == '__main__':
 
     # dataset,label_count=read_dataset()
     # path = "data/" + dataset + "/" + dataset
-    # # 读入ARFF文件数据
+    # # read ARFF file data
     # X, Y = read_arff(path, label_count)
 
     dataset = "simulation_data1.mat"
-    # 读入mat文件数据
+    # read mat file data
     X, Y = read_matfile(dataset)
 
-    print("当前数据集为："+dataset)
+    print("current datasets："+dataset)
 
-    # 5折交叉验证
+    # 5-fold cross validation
     temp_mean=list()
     temp_std=list()
     k_fold = IterativeStratification(n_splits=5, order=1)
@@ -155,13 +155,13 @@ if __name__ == '__main__':
             predictions_LP, pro_predictions_LP,new_pro_predictions_LP = LP(X[train][new_train], Y[train][new_train],
                                                     X[train][new_test], X[test])
             stacking = combine_feature(pro_predictions_BR, pro_predictions_CC, pro_predictions_LP)
-            # 学习w
+            # learning w
             groups = np.arange(stacking.values.shape[1]) // Y[train][new_test].todense().shape[1]
             model = blockwise_descent.SGL(groups=groups, alpha=0.05, lbda=math.pow(10, -3),
                                           beta=math.pow(10, -2), enta=0.1)
             model.fit(stacking.values, np.array(Y[train][new_test].todense()))
             w = model.coef_
-            # 预测
+            # prediction
             new_stacking=combine_feature(new_pro_predictions_BR, new_pro_predictions_CC, new_pro_predictions_LP)
             pre_score = np.dot(new_stacking.values, w)
             pred_label = np.rint(pre_score)
@@ -173,10 +173,10 @@ if __name__ == '__main__':
         temp_std.append(data.std())
         del output
 
-    # 得到每一折交叉预测结果mean+/-std
+    # The cross prediction results of each fold are obtained mean+/-std
     result_mean = pd.DataFrame(temp_mean)
     result_std = pd.DataFrame(temp_std)
-    # 输出结果
+    # output results
     result=pd.DataFrame({'Evaluate':['Accuracy','Precision','Recall','F1-Score','Hammingloss',
                                    'Subset','Micro-F1-Score','Macro-F1-Score','Rankloss','run_time'],
                          'Mean':result_mean.mean().values,'Std':result_std.mean().values})
