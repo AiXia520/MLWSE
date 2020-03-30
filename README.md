@@ -23,7 +23,7 @@ There is a folder `data/`, which contains some multi-label datasets.These datase
 
 #### Read multi-label datasets
 
-we use the accelerated proximal gradient and block coordinate descent to optimize MLWSE-L1 and MLWSE-L21, respectively.You can find in `lasso.py` and 'blockwise_descent_semisparse.py'.
+we use the accelerated proximal gradient and block coordinate descent to optimize MLWSE-L1 and MLWSE-L21, respectively.You can find in `lasso.py` and `util/blockwise_descent_semisparse.py`.
 1. `cd root/`
 2. When you use multi-label datasets in [arff](https://pypi.org/project/arff/0.9/) format, you can run `python read_arff.py`;
 3. When you use multi-label datasets in mat format, you can run `python read_matfile.py`;
