@@ -35,7 +35,7 @@ we use the accelerated proximal gradient and block coordinate descent to optimiz
 
 With 2-D synthetic datasets, we evaluate the weighted classifier selection ability of our approach by gradually adding different technical components. You can find in `simulation/simulation_lasso.py`
 1. `cd root/`;
-2. Run `lasso_stacking_simulaiton.py`, get `2-D Synthetic Datasets Results`;
+2. Run `python lasso_stacking_simulaiton.py`, get `2-D Synthetic Datasets Results`;
 
 #### Benchmark Datasets Results
 For multi-label benchmark datasets,you can use the following steps:
@@ -50,8 +50,8 @@ To explore the potential application of our proposed method,  we apply our appro
 2. Run `python lasso_stacking_ccd.py`, get `CCD datasets MLWSE-L1 results`;
 3. Run `python lasso_stacking2_ccd.py`, get `CCD datasets MLWSE-L21 results`;
 
-
 ### Algorithm Evaluation
+we use six common evaluation metrics to verify the performance including Hamming loss, Accuracy, Ranking loss, F1, Macro-F1 and Micro-F1. It has been implemented in `mlmetrics.py`. 
 
 #### Friedman Statistics Evaluation
 
