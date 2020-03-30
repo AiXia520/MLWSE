@@ -1,0 +1,966 @@
+@relation VirusGO
+
+@attribute Att1 numeric
+@attribute Att2 numeric
+@attribute Att3 numeric
+@attribute Att4 numeric
+@attribute Att5 numeric
+@attribute Att6 numeric
+@attribute Att7 numeric
+@attribute Att8 numeric
+@attribute Att9 numeric
+@attribute Att10 numeric
+@attribute Att11 numeric
+@attribute Att12 numeric
+@attribute Att13 numeric
+@attribute Att14 numeric
+@attribute Att15 numeric
+@attribute Att16 numeric
+@attribute Att17 numeric
+@attribute Att18 numeric
+@attribute Att19 numeric
+@attribute Att20 numeric
+@attribute Att21 numeric
+@attribute Att22 numeric
+@attribute Att23 numeric
+@attribute Att24 numeric
+@attribute Att25 numeric
+@attribute Att26 numeric
+@attribute Att27 numeric
+@attribute Att28 numeric
+@attribute Att29 numeric
+@attribute Att30 numeric
+@attribute Att31 numeric
+@attribute Att32 numeric
+@attribute Att33 numeric
+@attribute Att34 numeric
+@attribute Att35 numeric
+@attribute Att36 numeric
+@attribute Att37 numeric
+@attribute Att38 numeric
+@attribute Att39 numeric
+@attribute Att40 numeric
+@attribute Att41 numeric
+@attribute Att42 numeric
+@attribute Att43 numeric
+@attribute Att44 numeric
+@attribute Att45 numeric
+@attribute Att46 numeric
+@attribute Att47 numeric
+@attribute Att48 numeric
+@attribute Att49 numeric
+@attribute Att50 numeric
+@attribute Att51 numeric
+@attribute Att52 numeric
+@attribute Att53 numeric
+@attribute Att54 numeric
+@attribute Att55 numeric
+@attribute Att56 numeric
+@attribute Att57 numeric
+@attribute Att58 numeric
+@attribute Att59 numeric
+@attribute Att60 numeric
+@attribute Att61 numeric
+@attribute Att62 numeric
+@attribute Att63 numeric
+@attribute Att64 numeric
+@attribute Att65 numeric
+@attribute Att66 numeric
+@attribute Att67 numeric
+@attribute Att68 numeric
+@attribute Att69 numeric
+@attribute Att70 numeric
+@attribute Att71 numeric
+@attribute Att72 numeric
+@attribute Att73 numeric
+@attribute Att74 numeric
+@attribute Att75 numeric
+@attribute Att76 numeric
+@attribute Att77 numeric
+@attribute Att78 numeric
+@attribute Att79 numeric
+@attribute Att80 numeric
+@attribute Att81 numeric
+@attribute Att82 numeric
+@attribute Att83 numeric
+@attribute Att84 numeric
+@attribute Att85 numeric
+@attribute Att86 numeric
+@attribute Att87 numeric
+@attribute Att88 numeric
+@attribute Att89 numeric
+@attribute Att90 numeric
+@attribute Att91 numeric
+@attribute Att92 numeric
+@attribute Att93 numeric
+@attribute Att94 numeric
+@attribute Att95 numeric
+@attribute Att96 numeric
+@attribute Att97 numeric
+@attribute Att98 numeric
+@attribute Att99 numeric
+@attribute Att100 numeric
+@attribute Att101 numeric
+@attribute Att102 numeric
+@attribute Att103 numeric
+@attribute Att104 numeric
+@attribute Att105 numeric
+@attribute Att106 numeric
+@attribute Att107 numeric
+@attribute Att108 numeric
+@attribute Att109 numeric
+@attribute Att110 numeric
+@attribute Att111 numeric
+@attribute Att112 numeric
+@attribute Att113 numeric
+@attribute Att114 numeric
+@attribute Att115 numeric
+@attribute Att116 numeric
+@attribute Att117 numeric
+@attribute Att118 numeric
+@attribute Att119 numeric
+@attribute Att120 numeric
+@attribute Att121 numeric
+@attribute Att122 numeric
+@attribute Att123 numeric
+@attribute Att124 numeric
+@attribute Att125 numeric
+@attribute Att126 numeric
+@attribute Att127 numeric
+@attribute Att128 numeric
+@attribute Att129 numeric
+@attribute Att130 numeric
+@attribute Att131 numeric
+@attribute Att132 numeric
+@attribute Att133 numeric
+@attribute Att134 numeric
+@attribute Att135 numeric
+@attribute Att136 numeric
+@attribute Att137 numeric
+@attribute Att138 numeric
+@attribute Att139 numeric
+@attribute Att140 numeric
+@attribute Att141 numeric
+@attribute Att142 numeric
+@attribute Att143 numeric
+@attribute Att144 numeric
+@attribute Att145 numeric
+@attribute Att146 numeric
+@attribute Att147 numeric
+@attribute Att148 numeric
+@attribute Att149 numeric
+@attribute Att150 numeric
+@attribute Att151 numeric
+@attribute Att152 numeric
+@attribute Att153 numeric
+@attribute Att154 numeric
+@attribute Att155 numeric
+@attribute Att156 numeric
+@attribute Att157 numeric
+@attribute Att158 numeric
+@attribute Att159 numeric
+@attribute Att160 numeric
+@attribute Att161 numeric
+@attribute Att162 numeric
+@attribute Att163 numeric
+@attribute Att164 numeric
+@attribute Att165 numeric
+@attribute Att166 numeric
+@attribute Att167 numeric
+@attribute Att168 numeric
+@attribute Att169 numeric
+@attribute Att170 numeric
+@attribute Att171 numeric
+@attribute Att172 numeric
+@attribute Att173 numeric
+@attribute Att174 numeric
+@attribute Att175 numeric
+@attribute Att176 numeric
+@attribute Att177 numeric
+@attribute Att178 numeric
+@attribute Att179 numeric
+@attribute Att180 numeric
+@attribute Att181 numeric
+@attribute Att182 numeric
+@attribute Att183 numeric
+@attribute Att184 numeric
+@attribute Att185 numeric
+@attribute Att186 numeric
+@attribute Att187 numeric
+@attribute Att188 numeric
+@attribute Att189 numeric
+@attribute Att190 numeric
+@attribute Att191 numeric
+@attribute Att192 numeric
+@attribute Att193 numeric
+@attribute Att194 numeric
+@attribute Att195 numeric
+@attribute Att196 numeric
+@attribute Att197 numeric
+@attribute Att198 numeric
+@attribute Att199 numeric
+@attribute Att200 numeric
+@attribute Att201 numeric
+@attribute Att202 numeric
+@attribute Att203 numeric
+@attribute Att204 numeric
+@attribute Att205 numeric
+@attribute Att206 numeric
+@attribute Att207 numeric
+@attribute Att208 numeric
+@attribute Att209 numeric
+@attribute Att210 numeric
+@attribute Att211 numeric
+@attribute Att212 numeric
+@attribute Att213 numeric
+@attribute Att214 numeric
+@attribute Att215 numeric
+@attribute Att216 numeric
+@attribute Att217 numeric
+@attribute Att218 numeric
+@attribute Att219 numeric
+@attribute Att220 numeric
+@attribute Att221 numeric
+@attribute Att222 numeric
+@attribute Att223 numeric
+@attribute Att224 numeric
+@attribute Att225 numeric
+@attribute Att226 numeric
+@attribute Att227 numeric
+@attribute Att228 numeric
+@attribute Att229 numeric
+@attribute Att230 numeric
+@attribute Att231 numeric
+@attribute Att232 numeric
+@attribute Att233 numeric
+@attribute Att234 numeric
+@attribute Att235 numeric
+@attribute Att236 numeric
+@attribute Att237 numeric
+@attribute Att238 numeric
+@attribute Att239 numeric
+@attribute Att240 numeric
+@attribute Att241 numeric
+@attribute Att242 numeric
+@attribute Att243 numeric
+@attribute Att244 numeric
+@attribute Att245 numeric
+@attribute Att246 numeric
+@attribute Att247 numeric
+@attribute Att248 numeric
+@attribute Att249 numeric
+@attribute Att250 numeric
+@attribute Att251 numeric
+@attribute Att252 numeric
+@attribute Att253 numeric
+@attribute Att254 numeric
+@attribute Att255 numeric
+@attribute Att256 numeric
+@attribute Att257 numeric
+@attribute Att258 numeric
+@attribute Att259 numeric
+@attribute Att260 numeric
+@attribute Att261 numeric
+@attribute Att262 numeric
+@attribute Att263 numeric
+@attribute Att264 numeric
+@attribute Att265 numeric
+@attribute Att266 numeric
+@attribute Att267 numeric
+@attribute Att268 numeric
+@attribute Att269 numeric
+@attribute Att270 numeric
+@attribute Att271 numeric
+@attribute Att272 numeric
+@attribute Att273 numeric
+@attribute Att274 numeric
+@attribute Att275 numeric
+@attribute Att276 numeric
+@attribute Att277 numeric
+@attribute Att278 numeric
+@attribute Att279 numeric
+@attribute Att280 numeric
+@attribute Att281 numeric
+@attribute Att282 numeric
+@attribute Att283 numeric
+@attribute Att284 numeric
+@attribute Att285 numeric
+@attribute Att286 numeric
+@attribute Att287 numeric
+@attribute Att288 numeric
+@attribute Att289 numeric
+@attribute Att290 numeric
+@attribute Att291 numeric
+@attribute Att292 numeric
+@attribute Att293 numeric
+@attribute Att294 numeric
+@attribute Att295 numeric
+@attribute Att296 numeric
+@attribute Att297 numeric
+@attribute Att298 numeric
+@attribute Att299 numeric
+@attribute Att300 numeric
+@attribute Att301 numeric
+@attribute Att302 numeric
+@attribute Att303 numeric
+@attribute Att304 numeric
+@attribute Att305 numeric
+@attribute Att306 numeric
+@attribute Att307 numeric
+@attribute Att308 numeric
+@attribute Att309 numeric
+@attribute Att310 numeric
+@attribute Att311 numeric
+@attribute Att312 numeric
+@attribute Att313 numeric
+@attribute Att314 numeric
+@attribute Att315 numeric
+@attribute Att316 numeric
+@attribute Att317 numeric
+@attribute Att318 numeric
+@attribute Att319 numeric
+@attribute Att320 numeric
+@attribute Att321 numeric
+@attribute Att322 numeric
+@attribute Att323 numeric
+@attribute Att324 numeric
+@attribute Att325 numeric
+@attribute Att326 numeric
+@attribute Att327 numeric
+@attribute Att328 numeric
+@attribute Att329 numeric
+@attribute Att330 numeric
+@attribute Att331 numeric
+@attribute Att332 numeric
+@attribute Att333 numeric
+@attribute Att334 numeric
+@attribute Att335 numeric
+@attribute Att336 numeric
+@attribute Att337 numeric
+@attribute Att338 numeric
+@attribute Att339 numeric
+@attribute Att340 numeric
+@attribute Att341 numeric
+@attribute Att342 numeric
+@attribute Att343 numeric
+@attribute Att344 numeric
+@attribute Att345 numeric
+@attribute Att346 numeric
+@attribute Att347 numeric
+@attribute Att348 numeric
+@attribute Att349 numeric
+@attribute Att350 numeric
+@attribute Att351 numeric
+@attribute Att352 numeric
+@attribute Att353 numeric
+@attribute Att354 numeric
+@attribute Att355 numeric
+@attribute Att356 numeric
+@attribute Att357 numeric
+@attribute Att358 numeric
+@attribute Att359 numeric
+@attribute Att360 numeric
+@attribute Att361 numeric
+@attribute Att362 numeric
+@attribute Att363 numeric
+@attribute Att364 numeric
+@attribute Att365 numeric
+@attribute Att366 numeric
+@attribute Att367 numeric
+@attribute Att368 numeric
+@attribute Att369 numeric
+@attribute Att370 numeric
+@attribute Att371 numeric
+@attribute Att372 numeric
+@attribute Att373 numeric
+@attribute Att374 numeric
+@attribute Att375 numeric
+@attribute Att376 numeric
+@attribute Att377 numeric
+@attribute Att378 numeric
+@attribute Att379 numeric
+@attribute Att380 numeric
+@attribute Att381 numeric
+@attribute Att382 numeric
+@attribute Att383 numeric
+@attribute Att384 numeric
+@attribute Att385 numeric
+@attribute Att386 numeric
+@attribute Att387 numeric
+@attribute Att388 numeric
+@attribute Att389 numeric
+@attribute Att390 numeric
+@attribute Att391 numeric
+@attribute Att392 numeric
+@attribute Att393 numeric
+@attribute Att394 numeric
+@attribute Att395 numeric
+@attribute Att396 numeric
+@attribute Att397 numeric
+@attribute Att398 numeric
+@attribute Att399 numeric
+@attribute Att400 numeric
+@attribute Att401 numeric
+@attribute Att402 numeric
+@attribute Att403 numeric
+@attribute Att404 numeric
+@attribute Att405 numeric
+@attribute Att406 numeric
+@attribute Att407 numeric
+@attribute Att408 numeric
+@attribute Att409 numeric
+@attribute Att410 numeric
+@attribute Att411 numeric
+@attribute Att412 numeric
+@attribute Att413 numeric
+@attribute Att414 numeric
+@attribute Att415 numeric
+@attribute Att416 numeric
+@attribute Att417 numeric
+@attribute Att418 numeric
+@attribute Att419 numeric
+@attribute Att420 numeric
+@attribute Att421 numeric
+@attribute Att422 numeric
+@attribute Att423 numeric
+@attribute Att424 numeric
+@attribute Att425 numeric
+@attribute Att426 numeric
+@attribute Att427 numeric
+@attribute Att428 numeric
+@attribute Att429 numeric
+@attribute Att430 numeric
+@attribute Att431 numeric
+@attribute Att432 numeric
+@attribute Att433 numeric
+@attribute Att434 numeric
+@attribute Att435 numeric
+@attribute Att436 numeric
+@attribute Att437 numeric
+@attribute Att438 numeric
+@attribute Att439 numeric
+@attribute Att440 numeric
+@attribute Att441 numeric
+@attribute Att442 numeric
+@attribute Att443 numeric
+@attribute Att444 numeric
+@attribute Att445 numeric
+@attribute Att446 numeric
+@attribute Att447 numeric
+@attribute Att448 numeric
+@attribute Att449 numeric
+@attribute Att450 numeric
+@attribute Att451 numeric
+@attribute Att452 numeric
+@attribute Att453 numeric
+@attribute Att454 numeric
+@attribute Att455 numeric
+@attribute Att456 numeric
+@attribute Att457 numeric
+@attribute Att458 numeric
+@attribute Att459 numeric
+@attribute Att460 numeric
+@attribute Att461 numeric
+@attribute Att462 numeric
+@attribute Att463 numeric
+@attribute Att464 numeric
+@attribute Att465 numeric
+@attribute Att466 numeric
+@attribute Att467 numeric
+@attribute Att468 numeric
+@attribute Att469 numeric
+@attribute Att470 numeric
+@attribute Att471 numeric
+@attribute Att472 numeric
+@attribute Att473 numeric
+@attribute Att474 numeric
+@attribute Att475 numeric
+@attribute Att476 numeric
+@attribute Att477 numeric
+@attribute Att478 numeric
+@attribute Att479 numeric
+@attribute Att480 numeric
+@attribute Att481 numeric
+@attribute Att482 numeric
+@attribute Att483 numeric
+@attribute Att484 numeric
+@attribute Att485 numeric
+@attribute Att486 numeric
+@attribute Att487 numeric
+@attribute Att488 numeric
+@attribute Att489 numeric
+@attribute Att490 numeric
+@attribute Att491 numeric
+@attribute Att492 numeric
+@attribute Att493 numeric
+@attribute Att494 numeric
+@attribute Att495 numeric
+@attribute Att496 numeric
+@attribute Att497 numeric
+@attribute Att498 numeric
+@attribute Att499 numeric
+@attribute Att500 numeric
+@attribute Att501 numeric
+@attribute Att502 numeric
+@attribute Att503 numeric
+@attribute Att504 numeric
+@attribute Att505 numeric
+@attribute Att506 numeric
+@attribute Att507 numeric
+@attribute Att508 numeric
+@attribute Att509 numeric
+@attribute Att510 numeric
+@attribute Att511 numeric
+@attribute Att512 numeric
+@attribute Att513 numeric
+@attribute Att514 numeric
+@attribute Att515 numeric
+@attribute Att516 numeric
+@attribute Att517 numeric
+@attribute Att518 numeric
+@attribute Att519 numeric
+@attribute Att520 numeric
+@attribute Att521 numeric
+@attribute Att522 numeric
+@attribute Att523 numeric
+@attribute Att524 numeric
+@attribute Att525 numeric
+@attribute Att526 numeric
+@attribute Att527 numeric
+@attribute Att528 numeric
+@attribute Att529 numeric
+@attribute Att530 numeric
+@attribute Att531 numeric
+@attribute Att532 numeric
+@attribute Att533 numeric
+@attribute Att534 numeric
+@attribute Att535 numeric
+@attribute Att536 numeric
+@attribute Att537 numeric
+@attribute Att538 numeric
+@attribute Att539 numeric
+@attribute Att540 numeric
+@attribute Att541 numeric
+@attribute Att542 numeric
+@attribute Att543 numeric
+@attribute Att544 numeric
+@attribute Att545 numeric
+@attribute Att546 numeric
+@attribute Att547 numeric
+@attribute Att548 numeric
+@attribute Att549 numeric
+@attribute Att550 numeric
+@attribute Att551 numeric
+@attribute Att552 numeric
+@attribute Att553 numeric
+@attribute Att554 numeric
+@attribute Att555 numeric
+@attribute Att556 numeric
+@attribute Att557 numeric
+@attribute Att558 numeric
+@attribute Att559 numeric
+@attribute Att560 numeric
+@attribute Att561 numeric
+@attribute Att562 numeric
+@attribute Att563 numeric
+@attribute Att564 numeric
+@attribute Att565 numeric
+@attribute Att566 numeric
+@attribute Att567 numeric
+@attribute Att568 numeric
+@attribute Att569 numeric
+@attribute Att570 numeric
+@attribute Att571 numeric
+@attribute Att572 numeric
+@attribute Att573 numeric
+@attribute Att574 numeric
+@attribute Att575 numeric
+@attribute Att576 numeric
+@attribute Att577 numeric
+@attribute Att578 numeric
+@attribute Att579 numeric
+@attribute Att580 numeric
+@attribute Att581 numeric
+@attribute Att582 numeric
+@attribute Att583 numeric
+@attribute Att584 numeric
+@attribute Att585 numeric
+@attribute Att586 numeric
+@attribute Att587 numeric
+@attribute Att588 numeric
+@attribute Att589 numeric
+@attribute Att590 numeric
+@attribute Att591 numeric
+@attribute Att592 numeric
+@attribute Att593 numeric
+@attribute Att594 numeric
+@attribute Att595 numeric
+@attribute Att596 numeric
+@attribute Att597 numeric
+@attribute Att598 numeric
+@attribute Att599 numeric
+@attribute Att600 numeric
+@attribute Att601 numeric
+@attribute Att602 numeric
+@attribute Att603 numeric
+@attribute Att604 numeric
+@attribute Att605 numeric
+@attribute Att606 numeric
+@attribute Att607 numeric
+@attribute Att608 numeric
+@attribute Att609 numeric
+@attribute Att610 numeric
+@attribute Att611 numeric
+@attribute Att612 numeric
+@attribute Att613 numeric
+@attribute Att614 numeric
+@attribute Att615 numeric
+@attribute Att616 numeric
+@attribute Att617 numeric
+@attribute Att618 numeric
+@attribute Att619 numeric
+@attribute Att620 numeric
+@attribute Att621 numeric
+@attribute Att622 numeric
+@attribute Att623 numeric
+@attribute Att624 numeric
+@attribute Att625 numeric
+@attribute Att626 numeric
+@attribute Att627 numeric
+@attribute Att628 numeric
+@attribute Att629 numeric
+@attribute Att630 numeric
+@attribute Att631 numeric
+@attribute Att632 numeric
+@attribute Att633 numeric
+@attribute Att634 numeric
+@attribute Att635 numeric
+@attribute Att636 numeric
+@attribute Att637 numeric
+@attribute Att638 numeric
+@attribute Att639 numeric
+@attribute Att640 numeric
+@attribute Att641 numeric
+@attribute Att642 numeric
+@attribute Att643 numeric
+@attribute Att644 numeric
+@attribute Att645 numeric
+@attribute Att646 numeric
+@attribute Att647 numeric
+@attribute Att648 numeric
+@attribute Att649 numeric
+@attribute Att650 numeric
+@attribute Att651 numeric
+@attribute Att652 numeric
+@attribute Att653 numeric
+@attribute Att654 numeric
+@attribute Att655 numeric
+@attribute Att656 numeric
+@attribute Att657 numeric
+@attribute Att658 numeric
+@attribute Att659 numeric
+@attribute Att660 numeric
+@attribute Att661 numeric
+@attribute Att662 numeric
+@attribute Att663 numeric
+@attribute Att664 numeric
+@attribute Att665 numeric
+@attribute Att666 numeric
+@attribute Att667 numeric
+@attribute Att668 numeric
+@attribute Att669 numeric
+@attribute Att670 numeric
+@attribute Att671 numeric
+@attribute Att672 numeric
+@attribute Att673 numeric
+@attribute Att674 numeric
+@attribute Att675 numeric
+@attribute Att676 numeric
+@attribute Att677 numeric
+@attribute Att678 numeric
+@attribute Att679 numeric
+@attribute Att680 numeric
+@attribute Att681 numeric
+@attribute Att682 numeric
+@attribute Att683 numeric
+@attribute Att684 numeric
+@attribute Att685 numeric
+@attribute Att686 numeric
+@attribute Att687 numeric
+@attribute Att688 numeric
+@attribute Att689 numeric
+@attribute Att690 numeric
+@attribute Att691 numeric
+@attribute Att692 numeric
+@attribute Att693 numeric
+@attribute Att694 numeric
+@attribute Att695 numeric
+@attribute Att696 numeric
+@attribute Att697 numeric
+@attribute Att698 numeric
+@attribute Att699 numeric
+@attribute Att700 numeric
+@attribute Att701 numeric
+@attribute Att702 numeric
+@attribute Att703 numeric
+@attribute Att704 numeric
+@attribute Att705 numeric
+@attribute Att706 numeric
+@attribute Att707 numeric
+@attribute Att708 numeric
+@attribute Att709 numeric
+@attribute Att710 numeric
+@attribute Att711 numeric
+@attribute Att712 numeric
+@attribute Att713 numeric
+@attribute Att714 numeric
+@attribute Att715 numeric
+@attribute Att716 numeric
+@attribute Att717 numeric
+@attribute Att718 numeric
+@attribute Att719 numeric
+@attribute Att720 numeric
+@attribute Att721 numeric
+@attribute Att722 numeric
+@attribute Att723 numeric
+@attribute Att724 numeric
+@attribute Att725 numeric
+@attribute Att726 numeric
+@attribute Att727 numeric
+@attribute Att728 numeric
+@attribute Att729 numeric
+@attribute Att730 numeric
+@attribute Att731 numeric
+@attribute Att732 numeric
+@attribute Att733 numeric
+@attribute Att734 numeric
+@attribute Att735 numeric
+@attribute Att736 numeric
+@attribute Att737 numeric
+@attribute Att738 numeric
+@attribute Att739 numeric
+@attribute Att740 numeric
+@attribute Att741 numeric
+@attribute Att742 numeric
+@attribute Att743 numeric
+@attribute Att744 numeric
+@attribute Att745 numeric
+@attribute Att746 numeric
+@attribute Att747 numeric
+@attribute Att748 numeric
+@attribute Att749 numeric
+@attribute Label1 {0,1}
+@attribute Label2 {0,1}
+@attribute Label3 {0,1}
+@attribute Label4 {0,1}
+@attribute Label5 {0,1}
+@attribute Label6 {0,1}
+
+@data
+{106 1,313 1,315 1,749 1}
+{106 1,313 1,315 1,749 1}
+{106 1,313 1,315 1,749 1}
+{106 1,313 1,315 1,749 1}
+{106 1,313 1,315 1,749 1}
+{284 1,285 1,313 1,316 1,319 1,326 1,349 1,425 1,554 1,555 1,606 1,727 1,728 1,750 1,751 1}
+{284 1,285 1,313 1,316 1,327 1,349 1,425 1,559 1,560 1,606 1,684 1,750 1}
+{284 1,313 1,319 1,336 1,349 1,379 1,425 1,426 1,454 1,455 1,459 1,476 1,559 1,565 1,684 1,750 1}
+{106 1,166 1,284 1,285 1,287 1,313 1,316 1,319 1,326 1,349 1,362 1,364 1,379 1,425 1,515 1,559 1,560 1,580 1,606 1,684 1,727 1,728 1,750 1}
+{5 1,34 1,37 1,94 1,96 1,97 1,108 1,111 1,116 1,123 1,128 1,129 1,152 1,165 1,183 1,185 1,196 1,199 1,226 1,284 1,285 1,286 1,290 1,291 1,296 1,299 1,349 1,359 1,416 1,425 1,435 1,533 1,540 1,652 1,660 1,672 1,691 1,692 1,750 1}
+{115 1,284 1,285 1,313 1,319 1,349 1,425 1,684 1,750 1,754 1}
+{106 1,284 1,287 1,313 1,349 1,425 1,426 1,684 1,750 1}
+{99 1,100 1,101 1,184 1,188 1,284 1,285 1,349 1,425 1,698 1,750 1}
+{99 1,100 1,184 1,188 1,284 1,285 1,349 1,425 1,750 1}
+{284 1,285 1,318 1,319 1,349 1,370 1,425 1,426 1,493 1,494 1,574 1,750 1}
+{108 1,284 1,313 1,316 1,327 1,349 1,425 1,606 1,684 1,750 1}
+{284 1,285 1,319 1,323 1,340 1,349 1,379 1,425 1,453 1,454 1,455 1,467 1,475 1,495 1,750 1,751 1}
+{61 1,159 1,284 1,349 1,425 1,427 1,554 1,555 1,609 1,750 1,751 1}
+{0 1,1 1,3 1,4 1,5 1,6 1,8 1,10 1,11 1,14 1,15 1,20 1,24 1,33 1,43 1,44 1,53 1,54 1,59 1,76 1,106 1,108 1,112 1,117 1,118 1,123 1,124 1,126 1,127 1,128 1,130 1,133 1,157 1,161 1,162 1,163 1,164 1,166 1,167 1,168 1,169 1,178 1,180 1,181 1,182 1,184 1,185 1,186 1,189 1,190 1,191 1,194 1,195 1,197 1,198 1,200 1,201 1,202 1,205 1,208 1,211 1,213 1,214 1,215 1,216 1,217 1,218 1,221 1,222 1,223 1,225 1,226 1,228 1,232 1,242 1,243 1,244 1,245 1,246 1,247 1,251 1,252 1,253 1,254 1,255 1,257 1,258 1,265 1,267 1,275 1,278 1,279 1,284 1,288 1,292 1,311 1,312 1,315 1,342 1,348 1,349 1,353 1,356 1,363 1,364 1,367 1,369 1,371 1,372 1,380 1,381 1,387 1,388 1,389 1,391 1,393 1,394 1,398 1,400 1,401 1,406 1,412 1,413 1,415 1,416 1,417 1,425 1,434 1,436 1,437 1,438 1,441 1,442 1,444 1,447 1,448 1,449 1,450 1,451 1,497 1,498 1,499 1,500 1,501 1,503 1,504 1,506 1,510 1,516 1,526 1,527 1,528 1,530 1,536 1,537 1,538 1,541 1,546 1,548 1,564 1,575 1,577 1,581 1,583 1,585 1,587 1,590 1,592 1,596 1,598 1,599 1,600 1,601 1,604 1,605 1,621 1,623 1,627 1,628 1,639 1,645 1,646 1,649 1,660 1,661 1,663 1,668 1,670 1,673 1,674 1,675 1,678 1,679 1,700 1,705 1,707 1,711 1,713 1,714 1,717 1,732 1,735 1,737 1,738 1,740 1,741 1,742 1,743 1,744 1,745 1,746 1,747 1,748 1,750 1}
+{69 1,108 1,119 1,127 1,138 1,284 1,287 1,313 1,319 1,324 1,325 1,349 1,362 1,370 1,425 1,750 1,752 1}
+{59 1,107 1,115 1,159 1,160 1,166 1,232 1,284 1,285 1,313 1,319 1,349 1,370 1,379 1,425 1,454 1,455 1,458 1,562 1,563 1,750 1,752 1,754 1}
+{99 1,100 1,184 1,188 1,284 1,285 1,349 1,425 1,750 1}
+{284 1,285 1,313 1,349 1,425 1,684 1,750 1}
+{99 1,100 1,184 1,188 1,284 1,285 1,313 1,319 1,349 1,379 1,425 1,469 1,750 1}
+{61 1,65 1,106 1,159 1,284 1,315 1,319 1,349 1,370 1,425 1,505 1,545 1,609 1,664 1,750 1,752 1,753 1}
+{107 1,115 1,159 1,160 1,284 1,285 1,313 1,316 1,425 1,554 1,555 1,562 1,563 1,684 1,751 1,754 1}
+{113 1,284 1,285 1,319 1,379 1,425 1,554 1,555 1,751 1}
+{59 1,232 1,284 1,285 1,313 1,319 1,425 1,492 1,554 1,555 1,558 1,562 1,563 1,694 1,751 1}
+{284 1,285 1,425 1,554 1,555 1,751 1}
+{284 1,285 1,319 1,379 1,425 1,554 1,555 1,751 1}
+{59 1,114 1,232 1,258 1,284 1,425 1,554 1,555 1,562 1,563 1,751 1}
+{80 1,85 1,86 1,248 1,284 1,285 1,296 1,419 1,420 1,425 1,554 1,584 1,617 1,751 1}
+{284 1,285 1,319 1,379 1,425 1,508 1,554 1,555 1,611 1,751 1}
+{61 1,106 1,284 1,285 1,313 1,315 1,319 1,343 1,425 1,505 1,554 1,555 1,606 1,730 1,751 1,753 1}
+{60 1,69 1,106 1,313 1,314 1,370 1,374 1,557 1,562 1,574 1,751 1}
+{106 1,155 1,238 1,240 1,301 1,313 1,315 1,370 1,489 1,617 1,752 1}
+{59 1,114 1,232 1,284 1,370 1,425 1,550 1,551 1,752 1}
+{370 1,505 1,752 1,753 1}
+{370 1,505 1,752 1,753 1}
+{5 1,69 1,70 1,74 1,78 1,83 1,87 1,111 1,136 1,142 1,155 1,238 1,239 1,296 1,300 1,301 1,307 1,310 1,313 1,315 1,337 1,370 1,752 1}
+{313 1,370 1,752 1}
+{69 1,142 1,143 1,319 1,323 1,370 1,462 1,491 1,495 1,505 1,617 1,694 1,752 1,753 1}
+{61 1,107 1,159 1,160 1,284 1,285 1,319 1,349 1,370 1,425 1,505 1,554 1,556 1,571 1,752 1,753 1}
+{69 1,108 1,142 1,143 1,159 1,319 1,370 1,379 1,454 1,455 1,477 1,505 1,518 1,665 1,752 1,753 1}
+{331 1,370 1,615 1,752 1}
+{319 1,320 1,370 1,379 1,456 1,481 1,752 1}
+{78 1,313 1,370 1,752 1}
+{106 1,108 1,142 1,143 1,166 1,258 1,319 1,323 1,337 1,370 1,428 1,483 1,495 1,505 1,694 1,752 1,753 1}
+{313 1,317 1,370 1,505 1,752 1,753 1}
+{5 1,94 1,95 1,111 1,152 1,290 1,291 1,296 1,299 1,313 1,319 1,370 1,752 1}
+{106 1,313 1,315 1,370 1,486 1,752 1}
+{60 1,69 1,313 1,314 1,370 1,374 1,752 1}
+{66 1,69 1,108 1,119 1,127 1,138 1,143 1,159 1,287 1,319 1,325 1,362 1,370 1,505 1,569 1,665 1,752 1}
+{69 1,142 1,313 1,319 1,370 1,379 1,453 1,455 1,471 1,752 1}
+{150 1,370 1,752 1}
+{61 1,69 1,108 1,319 1,370 1,379 1,454 1,455 1,477 1,505 1,569 1,614 1,752 1}
+{69 1,108 1,284 1,285 1,313 1,314 1,315 1,316 1,319 1,326 1,370 1,425 1,428 1,487 1,562 1,563 1,606 1,684 1,727 1,728 1,752 1}
+{81 1,108 1,256 1,301 1,319 1,370 1,597 1,752 1}
+{370 1,505 1,752 1,753 1}
+{319 1,370 1,752 1}
+{61 1,106 1,315 1,319 1,370 1,505 1,617 1,752 1,753 1}
+{5 1,69 1,74 1,78 1,87 1,93 1,111 1,112 1,142 1,145 1,146 1,147 1,155 1,233 1,234 1,235 1,238 1,239 1,284 1,296 1,300 1,301 1,307 1,337 1,349 1,370 1,402 1,425 1,505 1,549 1,559 1,560 1,561 1,566 1,567 1,731 1,752 1,753 1}
+{83 1,155 1,238 1,239 1,301 1,313 1,338 1,370 1,752 1}
+{316 1,331 1,370 1,505 1,752 1,753 1}
+{142 1,143 1,313 1,317 1,319 1,370 1,461 1,485 1,496 1,505 1,752 1}
+{370 1,752 1}
+{5 1,78 1,296 1,300 1,313 1,337 1,370 1,752 1}
+{84 1,155 1,238 1,240 1,301 1,331 1,370 1,505 1,752 1,753 1}
+{69 1,159 1,319 1,370 1,505 1,569 1,594 1,665 1,752 1}
+{287 1,313 1,315 1,319 1,606 1,752 1}
+{106 1,315 1,370 1,574 1,752 1}
+{9 1,73 1,151 1,313 1,370 1,752 1}
+{69 1,142 1,143 1,313 1,317 1,370 1,505 1,752 1,753 1}
+{319 1,370 1,505 1,752 1,753 1}
+{331 1,370 1,607 1,752 1}
+{72 1,142 1,143 1,148 1,149 1,313 1,316 1,370 1,752 1}
+{150 1,370 1,752 1}
+{69 1,78 1,296 1,300 1,370 1,374 1,752 1}
+{319 1,370 1,492 1,505 1,694 1,752 1,753 1}
+{83 1,155 1,238 1,239 1,241 1,301 1,313 1,317 1,319 1,370 1,493 1,505 1,752 1,753 1}
+{60 1,69 1,313 1,314 1,319 1,370 1,374 1,379 1,454 1,455 1,477 1,752 1}
+{38 1,41 1,45 1,55 1,56 1,57 1,61 1,62 1,66 1,67 1,108 1,118 1,119 1,120 1,123 1,127 1,131 1,140 1,142 1,143 1,172 1,173 1,174 1,176 1,224 1,229 1,231 1,244 1,259 1,260 1,267 1,273 1,274 1,276 1,282 1,283 1,319 1,342 1,345 1,346 1,370 1,390 1,396 1,404 1,405 1,407 1,408 1,409 1,414 1,421 1,422 1,429 1,430 1,431 1,432 1,433 1,446 1,505 1,507 1,509 1,513 1,514 1,518 1,519 1,528 1,529 1,531 1,532 1,534 1,542 1,573 1,579 1,580 1,593 1,594 1,596 1,603 1,618 1,619 1,621 1,651 1,656 1,666 1,668 1,676 1,677 1,701 1,702 1,703 1,704 1,706 1,708 1,709 1,712 1,752 1}
+{313 1,319 1,370 1,379 1,453 1,454 1,455 1,470 1,472 1,473 1,505 1,617 1,752 1}
+{5 1,61 1,74 1,87 1,89 1,90 1,106 1,111 1,136 1,233 1,296 1,300 1,301 1,305 1,315 1,319 1,370 1,491 1,505 1,617 1,694 1,736 1,752 1}
+{319 1,370 1,505 1,752 1,753 1}
+{284 1,285 1,313 1,319 1,326 1,349 1,425 1,606 1,684 1,753 1}
+{61 1,65 1,136 1,313 1,317 1,505 1,617 1,753 1}
+{5 1,98 1,108 1,111 1,135 1,136 1,290 1,291 1,296 1,313 1,317 1,505 1,753 1}
+{141 1,313 1,334 1,505 1,753 1}
+{108 1,141 1,313 1,334 1,505 1,753 1}
+{69 1,78 1,115 1,119 1,127 1,142 1,145 1,147 1,287 1,313 1,319 1,324 1,325 1,327 1,328 1,329 1,330 1,332 1,333 1,336 1,339 1,397 1,428 1,461 1,496 1,505 1,606 1,753 1}
+{108 1,166 1,319 1,321 1,484 1,505 1,694 1,753 1}
+{5 1,60 1,61 1,75 1,132 1,136 1,296 1,300 1,505 1,753 1}
+{141 1,334 1,505 1,753 1}
+{5 1,61 1,63 1,87 1,108 1,111 1,136 1,142 1,143 1,301 1,319 1,370 1,379 1,386 1,454 1,455 1,459 1,476 1,491 1,493 1,494 1,505 1,617 1,694 1,753 1}
+{107 1,108 1,119 1,125 1,127 1,138 1,142 1,143 1,159 1,160 1,166 1,179 1,287 1,313 1,319 1,324 1,325 1,362 1,483 1,505 1,544 1,606 1,694 1,730 1,753 1}
+{5 1,61 1,79 1,87 1,111 1,136 1,301 1,302 1,505 1,753 1}
+{127 1,166 1,284 1,287 1,319 1,324 1,339 1,370 1,379 1,425 1,428 1,453 1,455 1,464 1,466 1,505 1,553 1,568 1,608 1,753 1}
+{61 1,136 1,505 1,753 1}
+{61 1,319 1,505 1,578 1,753 1}
+{108 1,313 1,315 1,319 1,331 1,333 1,505 1,606 1,730 1,753 1}
+{68 1,108 1,142 1,143 1,319 1,505 1,725 1,726 1,753 1}
+{61 1,142 1,143 1,505 1,594 1,753 1}
+{61 1,69 1,106 1,115 1,258 1,313 1,315 1,319 1,337 1,370 1,379 1,487 1,505 1,606 1,730 1,753 1,754 1}
+{284 1,313 1,316 1,505 1,684 1,753 1}
+{142 1,143 1,505 1,613 1,753 1}
+{106 1,313 1,315 1,505 1,753 1}
+{142 1,143 1,319 1,461 1,496 1,505 1,753 1}
+{313 1,319 1,370 1,379 1,453 1,454 1,455 1,470 1,472 1,473 1,505 1,617 1,753 1}
+{313 1,319 1,505 1,753 1}
+{61 1,313 1,315 1,331 1,505 1,753 1}
+{69 1,313 1,319 1,505 1,569 1,606 1,730 1,753 1}
+{69 1,106 1,115 1,119 1,127 1,128 1,284 1,287 1,313 1,319 1,324 1,325 1,327 1,328 1,329 1,330 1,332 1,333 1,336 1,339 1,378 1,379 1,397 1,474 1,505 1,606 1,684 1,753 1}
+{2 1,13 1,16 1,18 1,19 1,21 1,22 1,23 1,25 1,26 1,27 1,28 1,29 1,30 1,31 1,32 1,35 1,36 1,39 1,40 1,42 1,46 1,47 1,48 1,49 1,50 1,52 1,58 1,59 1,61 1,64 1,66 1,67 1,108 1,114 1,118 1,120 1,121 1,122 1,123 1,140 1,142 1,143 1,144 1,156 1,167 1,183 1,192 1,198 1,203 1,204 1,206 1,207 1,209 1,210 1,211 1,212 1,213 1,219 1,220 1,221 1,224 1,231 1,236 1,243 1,244 1,245 1,246 1,249 1,250 1,261 1,262 1,264 1,265 1,267 1,268 1,271 1,272 1,277 1,278 1,280 1,281 1,289 1,293 1,341 1,347 1,350 1,351 1,355 1,357 1,358 1,360 1,361 1,365 1,366 1,368 1,373 1,382 1,383 1,384 1,385 1,392 1,395 1,411 1,423 1,424 1,439 1,440 1,443 1,445 1,502 1,505 1,511 1,512 1,516 1,517 1,522 1,523 1,524 1,525 1,527 1,528 1,535 1,539 1,542 1,543 1,573 1,588 1,591 1,593 1,594 1,595 1,596 1,602 1,620 1,622 1,624 1,625 1,629 1,630 1,631 1,632 1,633 1,634 1,635 1,636 1,637 1,638 1,640 1,641 1,643 1,644 1,647 1,653 1,654 1,658 1,659 1,662 1,667 1,671 1,683 1,686 1,687 1,688 1,689 1,690 1,695 1,696 1,697 1,715 1,716 1,718 1,719 1,720 1,721 1,722 1,723 1,733 1,734 1,753 1}
+{61 1,65 1,136 1,505 1,617 1,753 1}
+{5 1,94 1,95 1,96 1,108 1,111 1,152 1,290 1,291 1,296 1,299 1,313 1,317 1,319 1,379 1,453 1,455 1,463 1,468 1,505 1,753 1}
+{60 1,69 1,77 1,82 1,89 1,90 1,91 1,138 1,155 1,159 1,238 1,242 1,296 1,300 1,301 1,313 1,315 1,319 1,505 1,606 1,609 1,617 1,730 1,736 1,753 1}
+{84 1,115 1,754 1}
+{115 1,258 1,754 1}
+{104 1,115 1,116 1,154 1,166 1,174 1,175 1,196 1,237 1,269 1,410 1,589 1,596 1,708 1,710 1,724 1,739 1,754 1}
+{104 1,115 1,116 1,175 1,227 1,754 1}
+{105 1,115 1,187 1,230 1,284 1,285 1,319 1,425 1,754 1}
+{115 1,258 1,344 1,754 1}
+{115 1,155 1,238 1,301 1,754 1}
+{106 1,313 1,315 1,749 1}
+{106 1,313 1,315 1,749 1}
+{106 1,313 1,315 1,749 1}
+{108 1,284 1,285 1,308 1,319 1,349 1,425 1,750 1}
+{115 1,284 1,285 1,313 1,316 1,319 1,326 1,349 1,379 1,425 1,454 1,455 1,479 1,606 1,684 1,727 1,728 1,750 1,754 1}
+{69 1,242 1,284 1,313 1,319 1,336 1,349 1,370 1,379 1,425 1,453 1,455 1,465 1,574 1,617 1,750 1}
+{284 1,285 1,313 1,316 1,319 1,326 1,349 1,425 1,559 1,560 1,562 1,563 1,606 1,684 1,750 1}
+{284 1,319 1,349 1,425 1,750 1}
+{99 1,100 1,184 1,188 1,284 1,285 1,313 1,319 1,349 1,379 1,425 1,469 1,750 1}
+{242 1,284 1,285 1,295 1,303 1,319 1,349 1,379 1,425 1,454 1,455 1,458 1,554 1,617 1,750 1,751 1}
+{99 1,100 1,184 1,188 1,284 1,285 1,349 1,425 1,750 1}
+{108 1,110 1,166 1,284 1,319 1,349 1,425 1,464 1,505 1,521 1,528 1,570 1,572 1,750 1}
+{171 1,284 1,285 1,313 1,316 1,327 1,349 1,425 1,606 1,684 1,693 1,750 1}
+{103 1,108 1,109 1,112 1,115 1,127 1,166 1,258 1,284 1,287 1,308 1,313 1,319 1,324 1,346 1,349 1,370 1,379 1,399 1,425 1,456 1,457 1,460 1,508 1,515 1,547 1,574 1,582 1,611 1,650 1,655 1,657 1,669 1,681 1,750 1}
+{5 1,69 1,74 1,78 1,87 1,93 1,111 1,112 1,142 1,145 1,146 1,147 1,155 1,233 1,234 1,235 1,238 1,239 1,284 1,296 1,300 1,301 1,307 1,337 1,349 1,370 1,402 1,425 1,505 1,549 1,559 1,560 1,561 1,566 1,567 1,731 1,750 1}
+{284 1,285 1,319 1,349 1,425 1,750 1}
+{284 1,285 1,370 1,379 1,425 1,552 1,554 1,555 1,562 1,563 1,576 1,751 1}
+{113 1,284 1,285 1,319 1,379 1,425 1,456 1,482 1,554 1,555 1,650 1,751 1}
+{170 1,258 1,284 1,285 1,313 1,316 1,319 1,326 1,327 1,425 1,558 1,606 1,616 1,684 1,727 1,751 1}
+{106 1,313 1,315 1,319 1,326 1,488 1,505 1,554 1,606 1,727 1,728 1,729 1,751 1,753 1}
+{115 1,284 1,285 1,313 1,316 1,319 1,326 1,425 1,554 1,555 1,562 1,563 1,606 1,684 1,751 1,754 1}
+{284 1,285 1,319 1,379 1,425 1,456 1,481 1,554 1,555 1,751 1}
+{159 1,313 1,319 1,370 1,505 1,752 1,753 1}
+{313 1,317 1,370 1,505 1,562 1,752 1,753 1}
+{66 1,69 1,108 1,115 1,119 1,142 1,143 1,166 1,287 1,319 1,370 1,379 1,454 1,455 1,463 1,478 1,505 1,520 1,569 1,617 1,648 1,752 1,754 1}
+{370 1,752 1}
+{61 1,69 1,106 1,115 1,258 1,313 1,315 1,319 1,337 1,370 1,379 1,487 1,505 1,606 1,730 1,752 1}
+{60 1,69 1,142 1,313 1,370 1,617 1,752 1}
+{81 1,256 1,301 1,370 1,597 1,617 1,752 1}
+{60 1,69 1,313 1,314 1,370 1,374 1,752 1}
+{313 1,317 1,370 1,562 1,752 1}
+{61 1,108 1,142 1,143 1,308 1,319 1,323 1,370 1,484 1,491 1,492 1,495 1,505 1,594 1,617 1,694 1,752 1,753 1}
+{313 1,315 1,319 1,326 1,370 1,606 1,752 1}
+{319 1,370 1,379 1,454 1,455 1,472 1,473 1,752 1}
+{370 1,752 1}
+{158 1,313 1,370 1,617 1,685 1,752 1}
+{370 1,752 1}
+{150 1,370 1,752 1}
+{313 1,370 1,752 1}
+{5 1,7 1,69 1,134 1,304 1,337 1,370 1,617 1,752 1}
+{370 1,752 1}
+{352 1,370 1,752 1}
+{313 1,317 1,370 1,505 1,752 1,753 1}
+{5 1,61 1,63 1,87 1,108 1,111 1,136 1,142 1,143 1,301 1,319 1,370 1,379 1,386 1,454 1,455 1,459 1,476 1,491 1,493 1,494 1,505 1,617 1,694 1,752 1}
+{258 1,294 1,306 1,370 1,685 1,752 1}
+{69 1,78 1,142 1,319 1,337 1,370 1,379 1,453 1,455 1,470 1,617 1,752 1}
+{60 1,69 1,313 1,314 1,370 1,374 1,379 1,617 1,752 1}
+{5 1,74 1,78 1,88 1,111 1,132 1,145 1,147 1,233 1,234 1,296 1,300 1,313 1,370 1,402 1,452 1,752 1}
+{61 1,115 1,142 1,143 1,287 1,319 1,370 1,505 1,594 1,752 1,753 1,754 1}
+{78 1,313 1,319 1,339 1,370 1,379 1,454 1,455 1,472 1,473 1,505 1,606 1,752 1,753 1}
+{69 1,71 1,108 1,119 1,127 1,287 1,319 1,322 1,323 1,324 1,339 1,342 1,370 1,379 1,453 1,454 1,455 1,462 1,465 1,477 1,505 1,610 1,612 1,680 1,682 1,752 1,753 1}
+{319 1,370 1,505 1,752 1,753 1}
+{69 1,370 1,752 1}
+{61 1,89 1,90 1,92 1,117 1,139 1,177 1,242 1,301 1,370 1,505 1,617 1,736 1,752 1,753 1}
+{313 1,370 1,505 1,562 1,569 1,752 1,753 1}
+{60 1,69 1,313 1,314 1,335 1,370 1,374 1,752 1}
+{61 1,136 1,142 1,242 1,319 1,505 1,617 1,753 1}
+{505 1,753 1}
+{5 1,61 1,66 1,136 1,137 1,142 1,143 1,287 1,505 1,753 1}
+{505 1,753 1}
+{61 1,63 1,66 1,108 1,136 1,137 1,142 1,143 1,319 1,379 1,456 1,480 1,490 1,505 1,518 1,594 1,753 1}
+{313 1,317 1,505 1,753 1}
+{319 1,505 1,753 1}
+{61 1,142 1,143 1,319 1,505 1,753 1}
+{61 1,142 1,143 1,505 1,753 1}
+{313 1,505 1,753 1}
+{2 1,12 1,17 1,32 1,38 1,51 1,61 1,64 1,66 1,108 1,118 1,123 1,142 1,143 1,144 1,193 1,263 1,266 1,270 1,278 1,354 1,375 1,377 1,403 1,505 1,506 1,519 1,542 1,586 1,594 1,596 1,618 1,626 1,642 1,699 1,753 1}
+{61 1,142 1,143 1,313 1,317 1,505 1,753 1}
+{61 1,66 1,108 1,142 1,143 1,319 1,379 1,453 1,455 1,471 1,492 1,505 1,542 1,694 1,753 1}
+{141 1,313 1,315 1,331 1,505 1,753 1}
+{61 1,142 1,143 1,313 1,317 1,319 1,505 1,753 1}
+{142 1,143 1,287 1,319 1,505 1,753 1}
+{5 1,61 1,74 1,87 1,89 1,90 1,106 1,111 1,136 1,233 1,296 1,300 1,301 1,305 1,315 1,319 1,370 1,491 1,505 1,617 1,694 1,736 1,753 1}
+{5 1,87 1,111 1,136 1,301 1,505 1,753 1}
+{313 1,324 1,505 1,753 1}
+{61 1,89 1,90 1,92 1,301 1,428 1,505 1,736 1,753 1}
+{5 1,60 1,61 1,75 1,132 1,136 1,296 1,300 1,505 1,753 1}
+{505 1,753 1}
+{115 1,754 1}
+{102 1,115 1,319 1,379 1,418 1,469 1,754 1}
+{115 1,754 1}
+{115 1,153 1,258 1,296 1,297 1,298 1,319 1,754 1}
+{115 1,301 1,309 1,376 1,754 1}

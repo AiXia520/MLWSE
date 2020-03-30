@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<labels xmlns="http://mulan.sourceforge.net/labels">
+<label name="business"> </label>
+<label name="entertainment"> </label>
+<label name="health"> </label>
+<label name="politics"> </label>
+<label name="sport"> </label>
+<label name="tech"> </label>
+</labels>
