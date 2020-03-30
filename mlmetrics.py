@@ -151,18 +151,3 @@ def print_hdf5_object(o):
     for k in o:
         print('{}: {}'.format(k, o[k].value))
 
-
-def project(V, x):
-    """
-    V: (embed dim, feature dim)
-    x: (feature_dim, )
-
-    return:
-    vector of (embed dim, )
-    """
-    if issparse(x):
-        x = x.toarray().T
-    if len(x.shape) == 1:
-        x = x[:, None]
-
-    return (V @ x).flatten()
