@@ -17,7 +17,7 @@ from skmultilearn.adapt import MLkNN
 from sklearn.naive_bayes import MultinomialNB
 from skmultilearn.ext import Meka, download_meka
 from skmultilearn.model_selection import IterativeStratification
-# 计算所有结果
+# Calculate all results
 def calculate_all(np_test, np_pred,pre_score, model_time,output,isPrint=False):
     value = list()
     value.append(accuracy(np_test,np_pred))
@@ -48,7 +48,7 @@ def calculate_all(np_test, np_pred,pre_score, model_time,output,isPrint=False):
     return(output)
 
 
-# BR分类器
+# BR classifier
 def BR(X_train,y_train,X_test,new_X_test):
     classifier = BinaryRelevance(
         classifier=SVC(probability=True,C=1.0, kernel='rbf',gamma='scale'),
@@ -62,7 +62,7 @@ def BR(X_train,y_train,X_test,new_X_test):
     new_pro_predictions = classifier.predict_proba(new_X_test)
     return(predictions,pro_predictions,new_pro_predictions)
 
-# CC分类器
+# CC classifier
 def CC(X_train,y_train,X_test,new_X_test):
     classifier = ClassifierChain(
         classifier=SVC(probability=True,C=1.0, kernel='rbf',gamma='scale'),
@@ -76,7 +76,7 @@ def CC(X_train,y_train,X_test,new_X_test):
     new_pro_predictions = classifier.predict_proba(new_X_test)
     return(predictions,pro_predictions,new_pro_predictions)
 
-# LP 分类器
+# LP classifier
 def LP(X_train,y_train,X_test,new_X_test):
     classifier = ClassifierChain(
         classifier=RandomForestClassifier(n_estimators=20),
@@ -91,17 +91,7 @@ def LP(X_train,y_train,X_test,new_X_test):
     return(predictions,pro_predictions,new_pro_predictions)
 
 
-#MLKNN分类器
-def MLKNN(X_train,y_train,X_test,y_test):
-    classifier = MLkNN(k=5)
-    # train
-    classifier.fit(X_train, y_train)
-    # predict
-    predictions = classifier.predict(X_test)
-    pro_predictions = classifier.predict_proba(X_test)
-    return(predictions,pro_predictions)
-
-# RAkEL 分类器
+# RAkEL classifier
 def RAkEL(X_train,y_train,X_test,y_test):
     meka = Meka(
         meka_classifier="meka.classifiers.multilabel.RAkEL",
@@ -112,7 +102,7 @@ def RAkEL(X_train,y_train,X_test,y_test):
     predictions = meka.predict(X_test)
     return (predictions)
 
-# MLS 分类器
+# MLS classifier
 def MLS(X_train,y_train,X_test,y_test):
     meka = Meka(
         meka_classifier="meka.classifiers.multilabel.BR",
@@ -123,13 +113,11 @@ def MLS(X_train,y_train,X_test,y_test):
     predictions = meka.predict(X_test)
     return (predictions)
 
-# 各个基分类器输出结果，特征降维联合
+# Features combine the output of each base classifier
 def combine_feature(pro_br,pro_cc,pro_lp):
     br = pd.DataFrame(pro_br.todense())
     cc = pd.DataFrame(pro_cc.todense())
     lp = pd.DataFrame(pro_lp.todense())
-    # mlknn=pd.DataFrame(pro_mlknn.todense())
-    # x_se = pd.DataFrame(X_se)
     X_new = pd.concat([br, cc, lp], axis=1)
     return(X_new)
 
@@ -141,14 +129,14 @@ if __name__ == '__main__':
 
     dataset,label_count=read_dataset()
     path = "data/" + dataset + "/" + dataset
-    # 读入ARFF文件数据
+    # read ARFF file data
     X, Y = read_arff(path, label_count)
 
     # dataset = "enron.mat"
-    # 读入mat文件数据
+    # read mat file data
     # X, Y = read_matfile(dataset)
 
-    print("当前数据集为："+dataset)
+    print("current datasets："+dataset)
 
     alphas = [0.01, 0.05, 0.1, 0.15, 0.2]
 
@@ -172,7 +160,7 @@ if __name__ == '__main__':
             tune_parameter.append(lbda)
             for beta in betas:
                 tune_parameter.append(beta)
-                # 5折交叉验证
+                # 5-fold cross validation
                 temp_mean=list()
                 temp_std=list()
                 k_fold = IterativeStratification(n_splits=5, order=1)
@@ -188,12 +176,12 @@ if __name__ == '__main__':
                         predictions_LP, pro_predictions_LP,new_pro_predictions_LP = LP(X[train][new_train], Y[train][new_train],
                                                                 X[train][new_test], X[test])
                         stacking = combine_feature(pro_predictions_BR, pro_predictions_CC, pro_predictions_LP)
-                        # 学习w
+                        # learning w
                         groups = np.arange(stacking.values.shape[1]) // Y[train][new_test].todense().shape[1]
                         model = blockwise_descent.SGL(groups=groups, alpha=alpha, lbda=lbda, beta=beta, enta=enta)
                         model.fit(stacking.values, np.array(Y[train][new_test].todense()))
                         w = model.coef_
-                        # 预测
+                        # prediction
                         new_stacking=combine_feature(new_pro_predictions_BR, new_pro_predictions_CC, new_pro_predictions_LP)
                         pre_score = np.dot(new_stacking.values, w)
                         pred_label = np.rint(pre_score)
@@ -205,10 +193,10 @@ if __name__ == '__main__':
                     temp_std.append(data.std())
                     del output
 
-                # 得到每一折交叉预测结果mean+/-std
+                # The cross prediction results of each fold are obtained mean+/-std
                 result_mean = pd.DataFrame(temp_mean)
                 result_std = pd.DataFrame(temp_std)
-                # 输出结果
+                # output results
                 result=pd.DataFrame({'Evaluate':['Accuracy','Precision','Recall','F1-Score','Hammingloss',
                                                'Subset','Micro-F1-Score','Macro-F1-Score','Rankloss','run_time'],
                                      'Mean':result_mean.mean().values,'Std':result_std.mean().values})
