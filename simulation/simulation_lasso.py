@@ -7,8 +7,6 @@ def softthres(x,e):
     b=np.maximum(-1*x-e,0)
     return a-b
 
-
-
 # base+sparsity+correlation
 def base_sparsity_corrleation(X,Y,alpha,beta,enta,maxIter,miniLossMargin):
     """
@@ -24,19 +22,19 @@ def base_sparsity_corrleation(X,Y,alpha,beta,enta,maxIter,miniLossMargin):
     XTX=np.dot(np.transpose(X), X)
     # X.T*Y
     XTY=np.dot(np.transpose(X), Y)
-    #初始化wo,w1
+    # Initialize the wo,w1
     W_s = np.dot(np.linalg.inv(XTX + enta * np.eye(n_features)),XTY).astype(np.float)
     W_s_1 = W_s
-    # 计算相似度距离
+    # Calculate the similarity distance
     H =pairwise_distances(np.transpose(Y),metric="cosine")
     # L = cosine_similarity(np.transpose(Y))
     # R=np.diag(L.sum(1))-L
     iter = 1
     oldloss = 0
     df = pd.DataFrame(columns=["step", "loss"])
-    # 计算Lipschitz constant
+    # Calculate Lipschitz constant
     Lip=math.sqrt(2*math.pow((np.linalg.norm(XTX,ord=2)),2)+math.pow(np.linalg.norm(beta*H ,ord=2),2))
-    # 初始化b0,b1
+    # Initialize the b0,b1
     bk=1
     bk_1=1
     # accelerate proximal gradient
@@ -51,14 +49,14 @@ def base_sparsity_corrleation(X,Y,alpha,beta,enta,maxIter,miniLossMargin):
 
         a=np.transpose(np.dot(X,W_s)-Y)
         b=np.dot(X,W_s)-Y
-        # 计算最小二乘损失
+        # Calculate the least squares loss
         predictionLoss=np.trace(np.dot(a,b))
-        # 计算相关性
+        # Calculated correlation
         correlation=np.trace(np.dot(H,np.dot(np.transpose(W_s),W_s)))
-        # 计算稀疏
+        # Calculate the sparse
         sparsity=np.sum(np.sum(np.int64(W_s!=0),axis=0),axis=1)
 
-        # 整体损失
+        # Calculate total loss
         totalloss = predictionLoss + beta * correlation + alpha * sparsity
 
         df = df.append(pd.DataFrame({'step': [iter], 'loss': [math.fabs(oldloss - totalloss)]}))
@@ -102,7 +100,7 @@ def base(X,Y,alpha,beta,enta,maxIter,miniLossMargin):
 
         a=np.transpose(np.dot(X,W_s)-Y)
         b=np.dot(X,W_s)-Y
-        # 计算最小二乘损失
+        # Calculate the least squares loss
         predictionLoss=np.trace(np.dot(a,b))
 
         totalloss = predictionLoss
@@ -137,16 +135,16 @@ def base_sparsity(X,Y,alpha,beta,enta,maxIter,miniLossMargin):
     XTX=np.dot(np.transpose(X), X)
     # X.T*Y
     XTY=np.dot(np.transpose(X), Y)
-    #初始化wo,w1
+    #Initialize the wo,w1
     W_s = np.dot(np.linalg.inv(XTX + enta * np.eye(n_features)),XTY).astype(np.float)
     W_s_1 = W_s
 
     iter = 1
     oldloss = 0
     df = pd.DataFrame(columns=["step", "loss"])
-    # 计算Lipschitz constant
+    # Calculate Lipschitz constant
     Lip=math.sqrt(2*math.pow((np.linalg.norm(XTX,ord=2)),2))
-    # 初始化b0,b1
+    # Initialize theb0,b1
     bk=1
     bk_1=1
     # accelerate proximal gradient
@@ -161,13 +159,12 @@ def base_sparsity(X,Y,alpha,beta,enta,maxIter,miniLossMargin):
 
         a=np.transpose(np.dot(X,W_s)-Y)
         b=np.dot(X,W_s)-Y
-        # 计算最小二乘损失
+        # Calculate the least squares loss
         predictionLoss=np.trace(np.dot(a,b))
 
-        # 计算稀疏
+        # Calculate the sparse
         sparsity=np.sum(np.sum(np.int64(W_s!=0),axis=0),axis=1)
 
-        # 整体损失
         totalloss = predictionLoss + alpha * sparsity
 
         df = df.append(pd.DataFrame({'step': [iter], 'loss': [math.fabs(oldloss - totalloss)]}))
