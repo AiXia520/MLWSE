@@ -15,7 +15,7 @@ The code for the paper Multi-Label Classification with Weighted Classifier Selec
 
 ### Materials Preparation
 
-There is a folder `data/`, which contains some multi-label datasets.These datasets can be download from the websites of [Mulan](http://mulan.sourceforge.net/), [KDIS](http://www.uco.es/kdis/mllresources/), and [Meka](http://waikato.github.io/meka/datasets/).
+There is a folder `data/`, which contains some multi-label datasets. You can download these datasets from the websites of [Mulan](http://mulan.sourceforge.net/), [KDIS](http://www.uco.es/kdis/mllresources/), and [Meka](http://waikato.github.io/meka/datasets/).
 
 #### Baseline(Ensemble multi-label classification methods)
 1. There is a folder `baseline/`, which contains seven state-of-the-art ensemble multi-label classification methods including EBR, ECC, EPS, RAkEL, CDE, AdaBoost.MH and MLS. These methods were implemented using the Mulan and Meka frameworks, which provide an API to use their functionalities in Java code. You can also download from [KDIS-lib](https://github.com/kdis-lab/ExecuteMulan).
@@ -24,6 +24,7 @@ There is a folder `data/`, which contains some multi-label datasets.These datase
 Run `Main.java`, get `baseline results`;
 
 #### Read multi-label datasets
+The multi-label datasets are stored primarily in the [arff](https://pypi.org/project/arff/0.9/) and mat formats, and you can use the following steps:
 1. `cd root/`;
 2. When you use multi-label datasets in [arff](https://pypi.org/project/arff/0.9/) format, you can run `python read_arff.py`;
 3. When you use multi-label datasets in mat format, you can run `python read_matfile.py`;
