@@ -66,8 +66,10 @@ We analyzed the parameter sensitivity of MLWSE-L1 and MLWSE-L21 by conducting ex
 3. Run `python lasso_stacking2_tune_parameter.py`, get `parameter sensitivity results`;
 
 #### Convergence Evaluation
-We analysis convergence of MLWSE-L1 and MLWSE-L21 by conducting experiments on different datasets.
-
+We analysis convergence of MLWSE-L1 and MLWSE-L21 by conducting experiments on the Emotions, Scene, Yeast and VirusGO datasets. The detailed results can be found in `result/stacking_iter_loss` and `result/stacking2_iter_loss`. You can also get result by using the following steps:
+1. `cd root/`;
+2. Run `python lasso_stacking.py`, get `MLWSE-L1 iter loss `;
+3. Run `python lasso_stacking2.py`, get `MLWSE-L21 iter losss;
 
 
 
