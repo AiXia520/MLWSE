@@ -54,7 +54,7 @@ To explore the potential application of our proposed method,  we apply our appro
 we use six common evaluation metrics to verify the performance including Hamming loss, Accuracy, Ranking loss, F1, Macro-F1 and Micro-F1. It has been implemented in `mlmetrics.py`. 
 
 #### Friedman Statistics Evaluation
-
+We employed the Friedman test to statistically analyze the performance of the different algorithms systematically. The detailed Friedman statistics analysis can be found in `result_analysis.xls`.  You can run `plot_friedman.py` to get CD diagrams of the algorithms under each evaluation criterion. 
 
 #### Parameter Sensitivity Evaluation 
 
