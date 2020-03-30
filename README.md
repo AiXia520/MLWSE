@@ -19,7 +19,8 @@ There is a folder `data/`, which contains some multi-label datasets.These datase
 
 #### Baseline(Ensemble multi-label classification methods)
 1. There is a folder `baseline/`, which contains seven state-of-the-art ensemble multi-label classification methods including EBR, ECC, EPS, RAkEL, CDE, AdaBoost.MH and MLS. These methods were implemented using the Mulan and Meka frameworks, which provide an API to use their functionalities in Java code. You can also download from [KDIS-lib](https://github.com/kdis-lab/ExecuteMulan).
-2. We have make a detailed integration, You can run `main.java` under the package `src/com.baseline.ensmeble` to get the experimental results.
+2. We have make a detailed integration, You can run `Main.java` under the package `src/com.baseline.ensmeble` to get the experimental results.
+Run `Main.java`, get `baseline results`;
 
 #### Read multi-label datasets
 1. `cd root/`;
@@ -42,7 +43,7 @@ For multi-label benchmark datasets,you can use the following steps:
 3. Run `python lasso_stacking2.py`, get `Benchmark Datasets MLWSE-L21 results`;
 
 #### Real-world Application Results
-To explore the potential application of our proposed method,  we apply our approach to a real Cardiovascular and Cerebrovascular Disease (CCD) dataset to demonstrate its potential for practical applications in medical diagnosis, and we take CCD dataset as another benchmarking dataset to run the experiments. 
+To explore the potential application of our proposed method,  we apply our approach to a real Cardiovascular and Cerebrovascular Disease (CCD) dataset to demonstrate its potential for practical applications in medical diagnosis, and we take CCD dataset as another benchmarking dataset to run the experiments. You can download the CCD dataset from `data/matfile/ccd.mat`.
 
 1. `cd root/`;
 2. Run `python lasso_stacking_ccd.py`, get `CCD datasets MLWSE-L1 results`;
