@@ -1,7 +1,7 @@
 import numpy
 import blockwise_descent_semisparse
 
-__author__ = 'Romain Tavenard romain.tavenard[at]univ-rennes2.fr'
+#use block coordinate descent to optimize MLWSE-L21
 
 
 class SGL(blockwise_descent_semisparse.SGL):
