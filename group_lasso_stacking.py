@@ -62,7 +62,7 @@ def BR(X_train,y_train,X_test,new_X_test):
     new_pro_predictions = classifier.predict_proba(new_X_test)
     return(predictions,pro_predictions,new_pro_predictions)
 
-# CC分类器
+# CC classifier
 def CC(X_train,y_train,X_test,new_X_test):
     classifier = ClassifierChain(
         classifier=SVC(probability=True,C=1.0, kernel='rbf',gamma='scale'),
