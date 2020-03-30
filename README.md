@@ -22,13 +22,12 @@ There is a folder `data/`, which contains some multi-label datasets.These datase
 2. We have done a detailed integration, You can run `main.java` under the package `src/com.baseline.ensmeble` to get the experimental results.
 
 #### Read multi-label datasets
-
-we use the accelerated proximal gradient and block coordinate descent to optimize MLWSE-L1 and MLWSE-L21, respectively.You can find in `lasso.py` and `util/blockwise_descent_semisparse.py`.
 1. `cd root/`
 2. When you use multi-label datasets in [arff](https://pypi.org/project/arff/0.9/) format, you can run `python read_arff.py`;
 3. When you use multi-label datasets in mat format, you can run `python read_matfile.py`;
 
 ### MLWSE-L1 And MLWSE-L21
+we use the accelerated proximal gradient and block coordinate descent to optimize MLWSE-L1 and MLWSE-L21, respectively.You can find in `lasso.py` and `util/blockwise_descent_semisparse.py`.
 1. `cd root/`
 2. Run `python lasso_stacking.py`, get `MLWSE-L1 results`
 3. Run `python lasso_stacking2.py`, get `MLWSE-L21 results`
