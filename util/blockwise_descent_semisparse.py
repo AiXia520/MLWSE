@@ -42,42 +42,41 @@ class SGL:
         # Calculate the step size by calculating the Lipschitz constant
         t = n /(math.sqrt(2 * math.pow((numpy.linalg.norm(XTX, ord=2)), 2) + math.pow(numpy.linalg.norm(self.beta * H, ord=2), 2)))
 
-        # t = n / (numpy.linalg.norm(X, 2) ** 2)  # Adaptation of the heuristic (?) from fabianp's code
         for iter_outer in range(self.max_iter_outer):
             beta_old = self.coef_.copy()
             for gr in range(n_groups):
                 # 1- Should the group be zero-ed out?
                 indices_group_k = self.groups == gr
-                # 验证条件,满足条件w=0，否则进入内部循环
+                # Verify that the condition, w=0, is satisfied, otherwise the inner loop is entered
                 if self.discard_group(X, y, indices_group_k):
                     self.coef_[indices_group_k] = 0.
                 else:
                     # 2- If the group is not zero-ed out, perform GD for the group
                     beta_k = self.coef_[indices_group_k]
-                    # 求c_k
                     p_l = numpy.sqrt(numpy.sum(indices_group_k))
                     for iter_inner in range(self.max_iter_inner):
-                        # 计算梯度
+                        # Calculate the gradient
                         # grad_l = self._grad_l(X, y, indices_group_k)+self.beta * numpy.dot(beta_k , H)
                         grad_l = self._grad_l(X, y, indices_group_k)
-                        # 更新w
+                        # Update w
                         tmp = S(beta_k - t * grad_l, t * alpha_lambda[indices_group_k])
                         tmp *= numpy.maximum(1. - t * (1 - self.alpha) * self.lbda * p_l / numpy.linalg.norm(tmp), 0.)
                         if numpy.linalg.norm(tmp - beta_k) / norm_non0(tmp) < self.rtol:
                             self.coef_[indices_group_k] = tmp
                             break
                         beta_k = self.coef_[indices_group_k] = tmp
-                # 计算每一个组L2损失
+                # Calculate each group L2 loss
                 s += numpy.sqrt(numpy.sum(indices_group_k)) * numpy.linalg.norm(self.coef_[indices_group_k])
-            # 计算最小二乘损失
+                
+            # Calculate the least squares loss
             l_loss=self.unregularized_loss(X, y)
-            # 计算L2 损失
+            # Calculate L2 loss
             reg_l2 = (1. - self.alpha) * self.lbda * s
-            # 计算L1损失
+            # Calculate L1 loss
             reg_l1 = numpy.linalg.norm(alpha_lambda * self.coef_, ord=1)
-            # 计算相关性
+            # Calculated correlation
             correlation=numpy.trace(numpy.dot(H,numpy.dot(numpy.transpose(self.coef_),self.coef_)))
-            # 总的损失
+            # Calculate total loss
             totalloss=l_loss + reg_l2 + reg_l1+ self.beta*correlation
 
 
