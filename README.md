@@ -71,7 +71,10 @@ We analysis convergence of MLWSE-L1 and MLWSE-L21 by conducting experiments on t
 2. Run `python lasso_stacking.py`, get `MLWSE-L1 iter loss `;
 3. Run `python lasso_stacking2.py`, get `MLWSE-L21 iter losss`;
 
-
+## References
+[1] G. Tsoumakas, E. Spyromitros-Xioufis, J. Vilcek, I. Vlahavas, Mulan: A java library for multi-label learning, Journal of Machine Learning Research, 12 (2011) 2411-2414.
+[2] J. Read, P. Reutemann, B. Pfahringer, G. Holmes, Meka: a multi-label/multi-target extension to weka, Journal of Machine Learning Research, 17 (2016) 667-671.
+[3] https://github.com/kdis-lab/ExecuteMulan
 
 
 
