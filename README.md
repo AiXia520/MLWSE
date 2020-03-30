@@ -23,7 +23,7 @@ There is a folder `data/`, which contains some multi-label datasets.These datase
 
 #### Read multi-label datasets
 1. `cd root/`
-2. When you use multi-label datasets in arff format, you can run `python read_arff.py`;
+2. When you use multi-label datasets in [arff](https://pypi.org/project/arff/0.9/) format, you can run `python read_arff.py`;
 3. When you use multi-label datasets in mat format, you can run `python read_matfile.py`;
 
 ### MLWSE-L1 And MLWSE-L21
