@@ -17,7 +17,7 @@ from skmultilearn.adapt import MLkNN
 from sklearn.naive_bayes import MultinomialNB
 from skmultilearn.ext import Meka, download_meka
 from skmultilearn.model_selection import IterativeStratification
-# 计算所有结果
+# calculate all results
 def calculate_all(np_test, np_pred,pre_score, model_time,output,isPrint=False):
     value = list()
     value.append(accuracy(np_test,np_pred))
@@ -48,7 +48,7 @@ def calculate_all(np_test, np_pred,pre_score, model_time,output,isPrint=False):
     return(output)
 
 
-# BR分类器
+# BR classifier
 def BR(X_train,y_train,X_test,new_X_test):
     classifier = BinaryRelevance(
         classifier=SVC(probability=True,C=1.0, kernel='rbf',gamma='scale'),
@@ -76,7 +76,7 @@ def CC(X_train,y_train,X_test,new_X_test):
     new_pro_predictions = classifier.predict_proba(new_X_test)
     return(predictions,pro_predictions,new_pro_predictions)
 
-# LP 分类器
+# LP classifier
 def LP(X_train,y_train,X_test,new_X_test):
     classifier = ClassifierChain(
         classifier=RandomForestClassifier(n_estimators=20),
@@ -91,17 +91,7 @@ def LP(X_train,y_train,X_test,new_X_test):
     return(predictions,pro_predictions,new_pro_predictions)
 
 
-#MLKNN分类器
-def MLKNN(X_train,y_train,X_test,y_test):
-    classifier = MLkNN(k=5)
-    # train
-    classifier.fit(X_train, y_train)
-    # predict
-    predictions = classifier.predict(X_test)
-    pro_predictions = classifier.predict_proba(X_test)
-    return(predictions,pro_predictions)
-
-# RAkEL 分类器
+# RAkEL classifier
 def RAkEL(X_train,y_train,X_test,y_test):
     meka = Meka(
         meka_classifier="meka.classifiers.multilabel.RAkEL",
@@ -112,7 +102,7 @@ def RAkEL(X_train,y_train,X_test,y_test):
     predictions = meka.predict(X_test)
     return (predictions)
 
-# MLS 分类器
+# MLS classifier
 def MLS(X_train,y_train,X_test,y_test):
     meka = Meka(
         meka_classifier="meka.classifiers.multilabel.BR",
@@ -123,7 +113,7 @@ def MLS(X_train,y_train,X_test,y_test):
     predictions = meka.predict(X_test)
     return (predictions)
 
-# 各个基分类器输出结果，特征降维联合
+# Features combine the output of each base classifier
 def combine_feature(pro_br,pro_cc,pro_lp):
     br = pd.DataFrame(pro_br.todense())
     cc = pd.DataFrame(pro_cc.todense())
@@ -144,10 +134,10 @@ if __name__ == '__main__':
 
     path = "data/" + dataset + "/" + dataset
 
-    print("当前数据集为："+dataset)
-    # 读入数据
+    print("current datasets："+dataset)
+    # read datasets
     X, Y = read_arff(path, label_count)
-    # 5折交叉验证
+    # 5-fold cross validation
     temp_mean=list()
     temp_std=list()
     k_fold = IterativeStratification(n_splits=5, order=1)
@@ -164,19 +154,16 @@ if __name__ == '__main__':
                                                     X[train][new_test], X[test])
             stacking = combine_feature(pro_predictions_BR, pro_predictions_CC, pro_predictions_LP)
             new_stacking = combine_feature(new_pro_predictions_BR, new_pro_predictions_CC, new_pro_predictions_LP)
-            # 训练w
+            # trianing w
             y=Y[train][new_test].toarray()
             y_out=list()
             y_score_out=list()
             for index in range(y.shape[1]):
-                # groups = np.arange(stacking.values.shape[1]) // 6
-                # # w = sparse_group_lasso(stacking.values, y[:, index],0, 0.05, groups, verbose=True)
-                # model = blockwise_descent.SGL(groups=groups, alpha=0.05, lbda=0.01)
-                # model.fit(stacking.values, y[:, index])
-                # w = model.coef_
-                # print(w)
-                w = group_lasso(stacking.values, y[:,index])
-                # 预测
+                groups = np.arange(stacking.values.shape[1]) // 6
+                model = blockwise_descent.SGL(groups=groups, alpha=0.05, lbda=0.01)
+                model.fit(stacking.values, y[:, index])
+                w = model.coef_
+                # prediction
                 pre_score = np.dot(new_stacking.values, w)
                 pred_label = np.int64(pre_score >= 0.5)
                 y_score_out.append(pre_score)
@@ -193,10 +180,10 @@ if __name__ == '__main__':
         temp_std.append(data.std())
         del output
 
-    # 得到每一折交叉预测结果mean+/-std
+    # The cross prediction results of each fold are obtained mean+/-std
     result_mean = pd.DataFrame(temp_mean)
     result_std = pd.DataFrame(temp_std)
-    # 输出结果
+    # output results
     result=pd.DataFrame({'Evaluate':['Accuracy','Precision','Recall','F1-Score','Hammingloss',
                                    'Subset','Micro-F1-Score','Macro-F1-Score','Rankloss','run_time'],
                          'Mean':result_mean.mean().values,'Std':result_std.mean().values})
