@@ -6,7 +6,7 @@ The code for the paper Multi-Label Classification with Weighted Classifier Selec
 
 * python 3.6
 * [scikit-learn](https://scikit-learn.org/)
-* [scikit-multilearn](http://scikit.ml/api/skmultilearn.html)
+* [scikit-multilearn](http://scikit.ml/index.html)
 * [numpy](https://numpy.org/)
 * [scipy](https://www.scipy.org/)
 * [pandas](https://pandas.pydata.org/)
@@ -78,6 +78,8 @@ We analysis convergence of MLWSE-L1 and MLWSE-L21 by conducting experiments on t
 [2] J. Read, P. Reutemann, B. Pfahringer, G. Holmes, Meka: a multi-label/multi-target extension to weka, Journal of Machine Learning Research, 17 (2016) 667-671.
 
 [3] https://github.com/kdis-lab/ExecuteMulan.
+
+[4] http://scikit.ml/index.html
 
 
 
