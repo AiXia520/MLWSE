@@ -34,7 +34,7 @@ we use the accelerated proximal gradient and block coordinate descent to optimiz
 
 #### 2-D Synthetic Datasets Results
 
-With 2-D synthetic datasets, we evaluate the weighted classifier selection ability of our approach by gradually adding different technical components. You can find in `simulation/simulation_lasso.py`
+With 2-D synthetic datasets, we evaluate the weighted classifier selection ability of our approach by gradually adding different technical components. You can find in `simulation/simulation_lasso.py`, and you can use the following steps:
 1. `cd root/`;
 2. Run `python lasso_stacking_simulaiton.py`, get `2-D Synthetic Datasets Results`;
 
